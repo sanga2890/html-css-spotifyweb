@@ -17,24 +17,33 @@
                 <li><a href="#"><i class="fas fa-search"></i>Cerca</a></li>
                 <li><a href="#"><i class="fas fa-book-open"></i>La tua libreria</a></li>
             </ul>
-            <p>Playlist</p>
+            <p class="recent">Playlist</p>
             <ul class="playlist">
                 <li><a href="#"><i class="fas fa-plus-square"></i>Crea playlist</a></li>
                 <li><a href="#"><i class="fas fa-heart"></i>Brani preferiti</a></li>
             </ul>
-            <hr>
-            <p class="white">ascoltati di recente</p>
-
-
+            <p class="recent">ascoltati di recente</p>
         </aside>
         <main id="main-content" >
+                <ul class="main-menu">
+                    <li><a href="#">in evidenza</a></li>
+                    <li><a href="#">podcast</a></li>
+                    <li><a href="#">classifiche</a></li>
+                    <li><a href="#">generi e mood</a></li>
+                    <li><a href="#">nuove uscite</a></li>
+                    <li><a href="#">scopri</a></li>
+                </ul>
+
 
         </main>
 
         <footer id="player-controls">
             <div class="track">
-                <img src="img/revolver.jpg" alt="">
-                <p>Eleonore Rigby</p>
+                    <img src="img/revolver.jpg" alt="">
+                <div class="title">
+                    <p><a href="#">Eleonore Rigby</a></p>
+                    <p><a class="author" href="#">The Beatles</a></p>
+                </div>
             </div>
             <div class="controls">
                 <div class="controls-up">
@@ -48,7 +57,10 @@
                 </div>
                 <div class="controls-down">
                 <div class="range">
+                    <p>
+                    <span>0.45</span>
                     <input type="range" min="0" max="100">
+                    <span>2.05</span></p>
                 </div>
                 </div>
             </div>
