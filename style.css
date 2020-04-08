@@ -19,6 +19,7 @@
     float: left;
     color: #fff;
     padding: 30px;
+
 }
 
 #menu-left img{
@@ -210,6 +211,14 @@
     opacity: 1;
 }
 
+.visible-xs {
+    display: none;
+    font-size: 50px;
+    color: #fff;
+    opacity: 0.6;
+    padding: 30px 16px;
+}
+
 @media (max-width: 767px) {
 
     .volume {
@@ -234,6 +243,7 @@
 
     #menu-left {
         width: 80px;
+        padding: 0;
     }
 
     #main-content {
@@ -244,8 +254,26 @@
         border:0;
     }
 
+    #menu-left .fas{
+        font-size: 30px;
+        padding-left: 25px;
+        padding-bottom: 10px;
+    }
+
     .range input {
         width: 70%;
+    }
+
+    #menu-left img {
+        display: none;
+    }
+
+    .visible-xs {
+        display: block;
+    }
+
+    .visible-xs:hover{
+        color: #1db954;
     }
 
 
