@@ -3,3 +3,35 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.clearfix{
+    clear: both;
+    content: '';
+    display: table;
+
+}
+#menu-left {
+    background-color: black;
+    padding: 20px;
+    float: left;
+    width: 250px;
+    height: calc(100vh - 90px);
+}
+
+#menu-left img{
+    width: 150px;
+}
+
+#main-content {
+    float: left;
+    width: calc(1903px - 250px);
+    height: calc(100vh - 90px);
+    background-color: lightgreen;
+}
+
+#player-controls {
+    width: 100vw;
+    height: 90px;
+    background-color: grey;
+
+}
