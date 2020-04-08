@@ -4,14 +4,19 @@
     box-sizing: border-box;
 }
 
-.clearfix{
-    display: flex
+.clearfix {
+    clear: both;
+   content: '';
+   display: table;
 }
+
+
 #menu-left {
     background-color: black;
     padding: 20px;
     width: 250px;
     height: calc(100vh - 90px);
+    float: left;
 }
 
 #menu-left img{
@@ -29,5 +34,6 @@
     width: 100vw;
     height: 90px;
     background-color: grey;
+    float: left;
 
 }
