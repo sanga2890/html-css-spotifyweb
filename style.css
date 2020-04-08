@@ -5,15 +5,11 @@
 }
 
 .clearfix{
-    clear: both;
-    content: '';
-    display: table;
-
+    display: flex
 }
 #menu-left {
     background-color: black;
     padding: 20px;
-    float: left;
     width: 250px;
     height: calc(100vh - 90px);
 }
@@ -24,7 +20,7 @@
 
 #main-content {
     float: left;
-    width: calc(1903px - 250px);
+    width: calc(100vw - 250px);
     height: calc(100vh - 90px);
     background-color: lightgreen;
 }
