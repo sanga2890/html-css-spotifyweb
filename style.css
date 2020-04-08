@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .clearfix {
@@ -23,17 +24,76 @@
     width: 150px;
 }
 
+#menu-left li {
+    list-style: none;
+}
+
+#menu-left .navigation>li>a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.5;
+}
+
+.white {
+    color: white;
+    opacity: 0.5;
+    text-transform: uppercase;
+}
+
 #main-content {
     float: left;
     width: calc(100vw - 250px);
     height: calc(100vh - 90px);
     background-color: lightgreen;
+    overflow: auto;
 }
 
 #player-controls {
     width: 100vw;
     height: 90px;
-    background-color: grey;
+    background-color: #282828;
     float: left;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 5px 20px;
+}
 
+.controls-up {
+    text-align: center;
+    opacity: 0.6;
+    font-size: 15px;
+}
+
+.controls-up .fas {
+    padding:20px;
+}
+
+.circle .fas{
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+
+.range input{
+    width: 100%;
+}
+
+
+
+.volume {
+    line-height: 80px;
+}
+.track {
+display: flex;
+align-items: center;
+
+}
+
+.track img {
+    height: 70%;
+    padding-right: 30px;
 }
