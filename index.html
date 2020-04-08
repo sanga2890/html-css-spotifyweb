@@ -9,9 +9,12 @@
         <title>Spotify Web</title>
     </head>
     <body>
+        <!-- clearfix in quanto ho usato il float per posizionare le tre sezioni -->
         <div class="clearfix">
+            <!-- menu principale sulla sinistra dello schermo -->
         <aside id="menu-left">
             <img src="img/spotify-logo.png" alt="logo Spotify">
+            <!-- lista del menu navigation -->
             <ul class="navigation">
                 <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
                 <li><a href="#"><i class="fas fa-search"></i>Cerca</a></li>
@@ -24,7 +27,9 @@
             </ul>
             <p class="recent">ascoltati di recente</p>
         </aside>
+        <!-- contenuto principale della pagina -->
         <main id="main-content" >
+            <!-- lista menu centrale  -->
                 <ul class="main-menu">
                     <li><a href="#">in evidenza</a></li>
                     <li><a href="#">podcast</a></li>
@@ -33,18 +38,20 @@
                     <li><a href="#">nuove uscite</a></li>
                     <li><a href="#">scopri</a></li>
                 </ul>
-
-
         </main>
-
+        <!-- sezione con i comandi del player musicale -->
         <footer id="player-controls">
+            <!-- parte sinistra in cui viene indicata la traccia attualmente in riproduzione -->
             <div class="track">
+                <!-- immagine cover album -->
                     <img src="img/revolver.jpg" alt="">
+                    <!-- titolo e autore del brano -->
                 <div class="title">
                     <p><a href="#">Eleonore Rigby</a></p>
                     <p><a class="author" href="#">The Beatles</a></p>
                 </div>
             </div>
+            <!-- parte centrare con i controlli principali -->
             <div class="controls">
                 <div class="controls-up">
                     <i class="fas fa-undo-alt"></i>
@@ -58,18 +65,20 @@
                 <div class="controls-down">
                 <div class="range">
                     <p>
-                    <span>0.45</span>
+                    <span>1.02</span>
+                    <!-- barra per mandare avanti o indietro velocemente il brano -->
                     <input type="range" min="0" max="100">
                     <span>2.05</span></p>
                 </div>
                 </div>
             </div>
+            <!-- sezione a detra con il controllo del volume e altri pulsanti -->
             <div class="volume">
                 <i class="fas fa-list"></i>
                 <i class="fas fa-desktop"></i>
                 <i class="fas fa-volume-up"></i>
+                <!-- barra per aumentare o abbassare il volume -->
                 <input type="range" min="0" max="100">
-
             </div>
 
         </footer>
