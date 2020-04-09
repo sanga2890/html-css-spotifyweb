@@ -33,6 +33,10 @@
     padding: 10px 0;
 }
 
+#menu-left i{
+    vertical-align: middle;
+}
+
 #menu-left .fas {
     font-size: 22px;
     padding-right: 15px;
@@ -113,6 +117,34 @@
     opacity: 1;
 }
 
+h1 {
+    padding-top: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+p.song-track {
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 220px;
+}
+
+.container {
+    color: #fff;
+    width: 1170px;
+    margin: 0 auto;
+}
+
+#main-content img {
+    width: 220px;
+}
+
 #player-controls {
     width: 100vw;
     height: 90px;
@@ -188,6 +220,11 @@
 
 .range input{
     width: 80%;
+    vertical-align: middle;
+}
+
+.range span{
+    vertical-align: middle;
 }
 .range{
     color: #fff;
@@ -210,6 +247,14 @@
 
 .volume .fas:hover {
     opacity: 1;
+}
+
+.volume i {
+    vertical-align: middle;
+}
+
+.volume input {
+    vertical-align: middle;
 }
 
 .visible-xs {
