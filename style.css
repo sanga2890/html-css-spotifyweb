@@ -6,7 +6,7 @@
 }
 
 .clearfix {
-    clear: both;
+   clear: both;
    content: '';
    display: table;
 }
@@ -79,15 +79,16 @@
     height: calc(100vh - 90px);
     background: rgb(43,43,46);
     background: linear-gradient(135deg, rgba(43,43,46,1) 0%, rgba(43,43,46,1) 10%, rgba(21,21,23,1) 89%);
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .main-menu {
     display: flex;
     justify-content: center;
+    align-items: center;
     list-style: none;
     text-transform: uppercase;
-    padding: 30px;
+    padding-top: 50px;
 }
 
 .main-menu a{
@@ -108,7 +109,7 @@
     left:50%;
     transform: translate(-50%, -50%);
     bottom: -30px;
-    border-bottom: 2px solid #1db954;
+    border-bottom: 2px solid rgb(29, 185, 84);
     width: 30px;
     opacity:0;
 }
@@ -117,14 +118,29 @@
     opacity: 1;
 }
 
-h1 {
+#main-content .fas {
+    font-size: 40px;
+    color: white;
+    opacity: 0.6;
+    display: none;
     padding-top: 30px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+#main-content .fas:hover{
+    opacity: 1;
+}
+
+h1 {
+    padding: 0 0 30px 20px;
     color: #fff;
+    width: 100%;
 }
 
 .row {
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-start;
     flex-wrap: wrap;
     padding-top: 50px;
 }
@@ -140,13 +156,13 @@ a.song-track {
     white-space:nowrap;
     overflow: hidden;
     text-overflow:ellipsis;
-    width: 220px;
+    width: 200px;
     color: #fff;
     padding-top: 5px;
 }
 
 .album {
-    padding-bottom: 30px;
+    padding: 0 0px 30px 20px;
 }
 
 a.author {
@@ -163,12 +179,12 @@ a.author:hover, a.song-track:hover {
 }
 
 .container {
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
 }
 
 #main-content img {
-    width: 220px;
+    width: 200px;
 }
 
 /* hover-img per far oscurare l'immagine in hover e far apparire l'icona del tasto play */
@@ -204,6 +220,7 @@ a.author:hover, a.song-track:hover {
 
 .hover-img:hover::before {
     background-color: rgba(2, 2, 2, 0.5);
+    box-shadow: 0 0 10px #000000;
 }
 
 #player-controls {
@@ -225,6 +242,7 @@ a.author:hover, a.song-track:hover {
 .track img {
     height: 70%;
     padding-right: 30px;
+    cursor: pointer;
 }
 
 .title a{
@@ -328,6 +346,10 @@ a.author:hover, a.song-track:hover {
 
 @media (max-width: 767px) {
 
+    #main-content .fas {
+        display: block;
+    }
+
     .volume {
         display: none;
     }
@@ -357,6 +379,18 @@ a.author:hover, a.song-track:hover {
         width: calc(100vw - 80px)
     }
 
+    #main-content img{
+        width: 110px;
+    }
+
+    .album p {
+        width: 110px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
     #menu-left ul:nth-of-type(2){
         border:0;
     }
@@ -384,5 +418,26 @@ a.author:hover, a.song-track:hover {
         opacity: 1;
     }
 
+    .row {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .main-menu{
+        display: none;
+    }
+    #main-content .fas {
+        display: block;
+    }
+
+    #main-content img{
+        width: 150px;
+    }
+
+    .album p {
+        width: 150px;
+    }
 
 }
