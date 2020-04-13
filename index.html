@@ -15,23 +15,31 @@
         <aside id="menu-left">
             <i class="visible-xs fab fa-spotify"></i>
             <img class="logo" src="img/spotify-logo.png" alt="logo Spotify">
-            <!-- lista del menu navigation -->
+            <!-- lista del menu navigation - inserito tutto il testo negli span per semplificare il responsive -->
             <ul class="navigation">
-                <li><a href="#"><img class="home" src="img/home.png" alt=""> <span>Home</span></a></li>
-                <li><a class="margin-left" href="#"><img class="search" src="img/search.png" alt=""><span>Cerca</span></a></li>
-                <li><a href="#"><img class="library" src="img/library.png" alt=""> <span>La tua libreria</span></a></li>
+                <li class="active"><a class="active" href="#"><img class="home" src="img/home-full.png" alt="home icon"> <span>Home</span></a></li>
+                <li><a class="margin-left" href="#"><img class="search" src="img/search.png" alt="search icon"><span>Cerca</span></a></li>
+                <li><a href="#"><img class="library" src="img/library.png" alt="library icon"> <span>La tua libreria</span></a></li>
             </ul>
                 <p class="playlist"><span>Playlist</span></p>
-                <a class="playlist-create"href="#"><div class="create"></div><span>Crea playlist</span></a>
+                <a class="playlist-create" href="#"><div class="create"></div><span>Crea playlist</span></a>
                 <a class="playlist-preferred" href="#"><div class="preferred"></div><span>Brani preferiti</span></a>
                 <p class="recent"><span>ascoltati di recente</span></p>
+                <p class="ellipsis"><span>Quentin Tarantino Once Upon a Time in Hollywood - Original Motion Picture Soundtrack</span></p>
+                <p class="ellipsis"><span>Riders on the storm - The Doors</span></p>
+                <div class="install-app">
+                    <a href="#"><i class="far fa-arrow-alt-circle-down"></i><span>Install App</span></a>
+                </div>
+                <div class="account">
+                    <a href="#"><i class="far fa-user-circle"></i><span>stefano2890</span></a>
+                </div>
         </aside>
         <!-- contenuto principale della pagina -->
         <main id="main-content" >
             <!-- lista menu centrale  -->
             <div class="container">
                 <ul class="main-menu">
-                    <li><a href="#">in evidenza</a></li>
+                    <li><a class="active" href="#">in evidenza</a></li>
                     <li><a href="#">podcast</a></li>
                     <li><a href="#">classifiche</a></li>
                     <li><a href="#">generi e mood</a></li>
@@ -117,8 +125,97 @@
                         </div>
                     </div>
                 </div>
-
-
+                <div id="rotazione-frequente" class="container">
+                    <div class="row">
+                        <h1>La tua rotazione frequente</h1>
+                        <!-- ogni singola casella contenente l'immagine della cover, il titolo e l'autore -->
+                        <div class="album">
+                            <!-- hover-img per far oscurare l'immagine in hover e far apparire l'icona del tasto play -->
+                            <div class="hover-img">
+                                <img src="img/humbug.jpg" alt="cover Humbug">
+                            </div>
+                                <p><a class="song-track" href="#">Cornerstone</a></p>
+                                <p><a class="author" href="#">Arctic Monkeys</a></p>
+                        </div>
+                        <div class="album">
+                            <div class="hover-img">
+                                <img src="img/backinblack.jpg" alt="cover back in black">
+                            </div>
+                                <p><a class="song-track" href="#">Back in Black</a></p>
+                                <p><a class="author" href="#">AC/DC</a></p>
+                        </div>
+                        <div class="album">
+                            <div class="hover-img">
+                                <img src="img/heroes.jpg" alt="cover heroes remastered 2017">
+                            </div>
+                                <p><a class="song-track" href="#">Heroes</a></p>
+                                <p><a class="author" href="#">David Bowie</a></p>
+                        </div>
+                        <div class="album">
+                            <div class="hover-img">
+                                <img src="img/viaconme.jpg" alt="cover via con me">
+                            </div>
+                                <p><a class="song-track" href="#">Via con me</a></p>
+                                <p><a class="author" href="#">Paolo Conte</a></p>
+                        </div>
+                        <div class="album">
+                            <div class="hover-img">
+                                <img src="img/thedoors.jpg" alt="cover the doors">
+                            </div>
+                                <p><a class="song-track" href="#">The End</a></p>
+                                <p><a class="author" href="#">The Doors</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="da-non-perdere" class="container">
+                    <div class="row">
+                        <h1>Le playlist da non perdere</h1>
+                        <!-- ogni singola casella contenente l'immagine della cover, il titolo e l'autore -->
+                        <div class="album">
+                            <!-- hover-img per far oscurare l'immagine in hover e far apparire l'icona del tasto play -->
+                            <div class="hover-img">
+                                <img src="img/altarotazione.jpg" alt="immagine spotify">
+                            </div>
+                                <p><a class="song-track" href="#">Italia in alta rotazione</a></p>
+                                <p><a class="author" href="#">La nostra radio tutta italiana</a></p>
+                        </div>
+                        <div class="album">
+                            <div class="hover-img">
+                                <img src="img/battleroyale.jpg" alt="immagine spotify">
+                            </div>
+                                <p><a class="song-track" href="#">Rap Italia: Battle Royale</a></p>
+                                <p><a class="author" href="#">I protagonisti della scena Rap italiana</a></p>
+                        </div>
+                        <div class="album">
+                            <div class="hover-img">
+                                <img src="img/buonumore.jpg" alt="immagine spotify">
+                            </div>
+                                <p><a class="song-track" href="#">Operazione Buonumore!</a></p>
+                                <p><a class="author" href="#">Sfoggia il sorriso migliore e fai il pieno di positività</a></p>
+                        </div>
+                        <div class="album">
+                            <div class="hover-img">
+                                <img src="img/hilist.jpg" alt="immagine spotify">
+                            </div>
+                                <p><a class="song-track" href="#">Hot Hits Italia</a></p>
+                                <p><a class="author" href="#">La Playlist più calda del momento</a></p>
+                        </div>
+                        <div class="album">
+                            <div class="hover-img">
+                                <img src="img/trap.jpg" alt="immagine spotify">
+                            </div>
+                                <p><a class="song-track" href="#">Zona Trap</a></p>
+                                <p><a class="author" href="#">Il meglio della scena Trap italiana</a></p>
+                        </div>
+                        <div class="album">
+                            <div class="hover-img">
+                                <img src="img/graffiti.jpg" alt="immagine spotify">
+                            </div>
+                                <p><a class="song-track" href="#">Graffiti Pop</a></p>
+                                <p><a class="author" href="#">Il suono dello street pop in italia</a></p>
+                        </div>
+                    </div>
+                </div>
         </main>
         <!-- sezione con i comandi del player musicale -->
         <footer id="player-controls">
@@ -161,7 +258,12 @@
                 <!-- barra per aumentare o abbassare il volume -->
                 <input type="range" min="0" max="100">
             </div>
-
+            <!-- titolo e autore che appariranno sotto solo dai 767px in giù -->
+            <div class="footer-bottom-xs">
+                <div class="title">
+                    <p><a href="#">Eleanor Rigby - </a><a class="author" href="#">The Beatles</a></p>
+                </div>
+            </div>
         </footer>
         </div>
 

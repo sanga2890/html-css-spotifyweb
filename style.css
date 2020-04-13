@@ -20,6 +20,7 @@
     float: left;
     color: #fff;
     padding: 30px 30px 30px 0;
+    position: relative;
 
 }
 
@@ -27,12 +28,18 @@
     width: 180px;
     padding-bottom: 20px;
     padding-left: 30px;
+    cursor:pointer;
 }
 
 #menu-left li {
     list-style: none;
     padding: 10px 0 10px 30px;
 }
+
+#menu-left li.active {
+    border-left: 3px solid rgb(29, 185, 84);
+}
+
 
 #menu-left li:hover{
     border-left: 3px solid rgb(29, 185, 84);
@@ -48,6 +55,10 @@
     font-size: 13px;
     font-weight: 600;
     opacity: 0.6;
+}
+
+#menu-left .navigation li.active a.active {
+    opacity: 1;
 }
 
 #menu-left .navigation>li>a:hover, #menu-left .playlist>li>a:hover {
@@ -141,6 +152,64 @@
     padding: 20px 0 20px 30px;
 }
 
+.install-app {
+    bottom: 50px;
+    position: absolute;
+    padding: 30px;
+    opacity: 0.6;
+
+}
+
+.install-app a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.install-app .far {
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+p.ellipsis {
+    font-size: 13px;
+    color: #fff;
+    opacity: 0.6;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    width: 200px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+
+p.ellipsis:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.account {
+    bottom: 0;
+    position: absolute;
+    padding: 30px;
+    opacity: 0.6;
+}
+
+.account a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.account .far {
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.account:hover, .install-app:hover {
+    opacity: 1;
+}
+
 #main-content {
     float: left;
     width: calc(100vw - 230px);
@@ -183,6 +252,22 @@
 }
 
 .main-menu a:hover::after, .main-menu a:hover{
+    opacity: 1;
+}
+
+#main-content .main-menu a.active{
+    opacity: 1;
+}
+
+#main-content .main-menu a.active::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    bottom: -30px;
+    border-bottom: 2px solid rgb(29, 185, 84);
+    width: 30px;
     opacity: 1;
 }
 
@@ -362,6 +447,7 @@ a.author:hover, a.song-track:hover {
     opacity: 1;
 }
 
+/* cerchio attorno all'icona pausa */
 .circle .fas{
     border: 1px solid #fff;
     border-radius: 50%;
@@ -377,6 +463,7 @@ a.author:hover, a.song-track:hover {
     vertical-align: middle;
 }
 
+/* style dell'input range slider */
 input[type=range]{
     -webkit-appearance: none;
     height: 4px;
@@ -384,6 +471,7 @@ input[type=range]{
     background: hsla(0,0%,100%,.2);
 }
 
+/* style del cerchietto dello slider */
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 13px;
@@ -428,6 +516,7 @@ input[type=range]::-webkit-slider-thumb {
     vertical-align: middle;
 }
 
+/* logo spotify senza scritta per schermi sotto i 768 px */
 .visible-xs {
     display: none;
     font-size: 50px;
@@ -436,6 +525,16 @@ input[type=range]::-webkit-slider-thumb {
     padding: 30px 16px;
 }
 
+/* titolo e autore brano che appairanno sotto il player dai 767 px in giù */
+.footer-bottom-xs {
+    display: none;
+    width: 100vw;
+    background-color: #282828;
+    text-align: center;
+}
+
+/* media query per il responsive su schermi con dimensioni inferiori a 768 px */
+
 @media (max-width: 767px) {
 
     #menu-left .navigation img.search, #menu-left .navigation img.home, #menu-left .navigation img.library {
@@ -443,26 +542,47 @@ input[type=range]::-webkit-slider-thumb {
     }
 
     .create, .preferred{
-        margin-left: 20px;
-        width: 40px;
-        height: 40px;
-        margin-bottom: 25px;
+        display: none;
     }
 
     #main-content .fas {
         display: block;
     }
 
+    #player-controls {
+        padding: 5px;
+        flex-wrap: wrap;
+        height: 130px;
+    }
+
+    .playlist {
+        padding: 10px;
+    }
+
     .volume {
         display: none;
     }
 
-    .track {
+    .track .title {
         display: none;
     }
 
+    .track img {
+        height: 75px;
+        margin-left: 5px;
+    }
+
     .controls{
-        width: 100%;
+        width: 80%;
+        padding: 10px;
+    }
+
+    .track {
+        width: 20%;
+    }
+
+    .controls-up .fas {
+        padding: 10px;
     }
 
     .main-menu {
@@ -475,16 +595,26 @@ input[type=range]::-webkit-slider-thumb {
 
     #menu-left li {
         padding-left: 25px;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
     }
 
     #menu-left {
         width: 80px;
         padding: 0;
+        height: calc(100vh - 130px);
+    }
+
+    .account .far , .install-app .far {
+        font-size: 30px;
+    }
+
+    .account, .install-app {
+        padding-left: 25px;
     }
 
     #main-content {
-        width: calc(100vw - 80px)
+        width: calc(100vw - 80px);
+        height: calc(100vh - 130px);
     }
 
     #main-content img{
@@ -501,6 +631,10 @@ input[type=range]::-webkit-slider-thumb {
 
     .range input {
         width: 70%;
+    }
+
+    .range {
+        padding-top: 10px;
     }
 
     #menu-left img.logo {
@@ -525,8 +659,17 @@ input[type=range]::-webkit-slider-thumb {
         border-top: 0;
     }
 
+    .footer-bottom-xs{
+        display: block;
+    }
 
+    .footer-bottom-xs .title {
+        padding: 0;
+        margin: 0;
+    }
 }
+
+/* media query per il responsive su schermi con dimensioni inferiori tra i 768 px e i 991px */
 
 @media (min-width:768px) and (max-width:991px) {
 
