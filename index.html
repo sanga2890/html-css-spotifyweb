@@ -14,19 +14,17 @@
             <!-- menu principale sulla sinistra dello schermo -->
         <aside id="menu-left">
             <i class="visible-xs fab fa-spotify"></i>
-            <img src="img/spotify-logo.png" alt="logo Spotify">
+            <img class="logo" src="img/spotify-logo.png" alt="logo Spotify">
             <!-- lista del menu navigation -->
             <ul class="navigation">
-                <li><a href="#"><i class="fas fa-home"></i><span>Home</span></a></li>
-                <li><a href="#"><i class="fas fa-search"></i><span>Cerca</span></a></li>
-                <li><a href="#"><i class="fas fa-book-open"></i><span>La tua libreria</span></a></li>
+                <li><a href="#"><img class="home" src="img/home.png" alt=""> <span>Home</span></a></li>
+                <li><a class="margin-left" href="#"><img class="search" src="img/search.png" alt=""><span>Cerca</span></a></li>
+                <li><a href="#"><img class="library" src="img/library.png" alt=""> <span>La tua libreria</span></a></li>
             </ul>
-            <p class="recent"><span>Playlist</span></p>
-            <ul class="playlist">
-                <li><a href="#"><i class="fas fa-plus-square"></i><span>Crea playlist</span></a></li>
-                <li><a href="#"><i class="fas fa-heart"></i><span>Brani preferiti</span></a></li>
-            </ul>
-            <p class="recent"><span>ascoltati di recente</span></p>
+                <p class="playlist"><span>Playlist</span></p>
+                <a class="playlist-create"href="#"><div class="create"></div><span>Crea playlist</span></a>
+                <a class="playlist-preferred" href="#"><div class="preferred"></div><span>Brani preferiti</span></a>
+                <p class="recent"><span>ascoltati di recente</span></p>
         </aside>
         <!-- contenuto principale della pagina -->
         <main id="main-content" >
@@ -150,7 +148,7 @@
                     <p>
                     <span>1.02</span>
                     <!-- barra per mandare avanti o indietro velocemente il brano -->
-                    <input type="range" min="0" max="100">
+                    <input type="range" min="0" max="100" class="slider">
                     <span>2.05</span></p>
                 </div>
                 </div>
