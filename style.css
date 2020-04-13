@@ -524,6 +524,8 @@ input[type=range]::-webkit-slider-thumb {
     .recent {
         border-top: 0;
     }
+
+
 }
 
 @media (min-width:768px) and (max-width:991px) {
@@ -543,8 +545,26 @@ input[type=range]::-webkit-slider-thumb {
         width: 150px;
     }
 
-    
+    .controls-up .fas {
+        padding: 10px;
+    }
+    .controls {
+        padding: 10px;
+    }
 
+    .range input {
+        width: 70%;
+    }
 
+    .range{
+        padding-top: 10px;
+    }
 
+    .volume .fas{
+        padding:3px;
+    }
+
+    .volume input{
+        width: 30%;
+    }
 }
