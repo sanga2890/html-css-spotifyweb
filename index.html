@@ -13,6 +13,8 @@
         <div class="clearfix">
             <!-- menu principale sulla sinistra dello schermo -->
         <aside id="menu-left">
+            <!-- div menu-left-top e bottom inserite per il l'aggiunta del display flex all'aside, per avere un miglior ragruppamento utilizzando lo space-between-->
+            <div class="menu-left-top">
             <i class="visible-xs fab fa-spotify"></i>
             <img class="logo" src="img/spotify-logo.png" alt="logo Spotify">
             <!-- lista del menu navigation - inserito tutto il testo negli span per semplificare il responsive -->
@@ -27,12 +29,15 @@
                 <p class="recent"><span>ascoltati di recente</span></p>
                 <p class="ellipsis"><span>Quentin Tarantino Once Upon a Time in Hollywood - Original Motion Picture Soundtrack</span></p>
                 <p class="ellipsis"><span>Riders on the storm - The Doors</span></p>
+            </div>
+            <div class="menu-left-bottom">
                 <div class="install-app">
                     <a href="#"><i class="far fa-arrow-alt-circle-down"></i><span>Install App</span></a>
                 </div>
                 <div class="account">
                     <a href="#"><i class="far fa-user-circle"></i><span>stefano2890</span></a>
                 </div>
+            </div>
         </aside>
         <!-- contenuto principale della pagina -->
         <main id="main-content" >
@@ -217,6 +222,8 @@
                     </div>
                 </div>
         </main>
+        </div>
+
         <!-- sezione con i comandi del player musicale -->
         <footer id="player-controls">
             <!-- parte sinistra in cui viene indicata la traccia attualmente in riproduzione -->
@@ -265,7 +272,5 @@
                 </div>
             </div>
         </footer>
-        </div>
-
     </body>
 </html>

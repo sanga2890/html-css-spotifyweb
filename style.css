@@ -5,9 +5,9 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.clearfix {
+.clearfix::after {
    clear: both;
-   content: '';
+   content: "";
    display: table;
 }
 
@@ -21,6 +21,9 @@
     color: #fff;
     padding: 30px 30px 30px 0;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 
@@ -153,11 +156,9 @@
 }
 
 .install-app {
-    bottom: 50px;
-    position: absolute;
-    padding: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
     opacity: 0.6;
-
 }
 
 .install-app a {
@@ -189,9 +190,7 @@ p.ellipsis:hover{
 }
 
 .account {
-    bottom: 0;
-    position: absolute;
-    padding: 30px;
+    padding-left: 30px;
     opacity: 0.6;
 }
 
@@ -212,11 +211,11 @@ p.ellipsis:hover{
 
 #main-content {
     float: left;
-    width: calc(100vw - 230px);
+    width: calc(100% - 230px);
     height: calc(100vh - 90px);
     background: rgb(43,43,46);
     background: linear-gradient(135deg, rgba(43,43,46,1) 0%, rgba(43,43,46,1) 10%, rgba(21,21,23,1) 89%);
-    overflow-y: auto;
+    overflow: auto;
 }
 
 .main-menu {
@@ -380,7 +379,6 @@ a.author:hover, a.song-track:hover {
     width: 100vw;
     height: 90px;
     background-color: #282828;
-    float: left;
     display: flex;
     justify-content: space-between;
     padding: 5px 20px;
@@ -610,10 +608,11 @@ input[type=range]::-webkit-slider-thumb {
 
     .account, .install-app {
         padding-left: 25px;
+        padding-bottom: 25px;
     }
 
     #main-content {
-        width: calc(100vw - 80px);
+        width: calc(100% - 80px);
         height: calc(100vh - 130px);
     }
 
