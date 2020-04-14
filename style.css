@@ -285,7 +285,7 @@ p.ellipsis:hover{
 }
 
 h1 {
-    padding: 0 0 30px 20px;
+    margin: 0 0 30px 20px;
     color: #fff;
     width: 100%;
 }
@@ -314,7 +314,7 @@ a.song-track {
 }
 
 .album {
-    padding: 0 0px 30px 20px;
+    margin: 0 0px 30px 20px;
 }
 
 a.author {
@@ -340,12 +340,12 @@ a.author:hover, a.song-track:hover {
 }
 
 /* hover-img per far oscurare l'immagine in hover e far apparire l'icona del tasto play */
-.hover-img {
+.album {
     position: relative;
     cursor: pointer;
 }
 
-.hover-img::before {
+.album::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -353,24 +353,24 @@ a.author:hover, a.song-track:hover {
     background-color: transparent;
 }
 
-.hover-img::after {
+.album::after {
     content: '\f04b';
     font-family: "Font Awesome 5 Free";
     font-weight:bold;
     font-size: 72px;
     color: white;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
 }
 
-.hover-img:hover::after {
+.album:hover::after {
     opacity: 0.7;
 }
 
-.hover-img:hover::before {
+.album:hover::before {
     background-color: rgba(2, 2, 2, 0.5);
     box-shadow: 0 0 10px #000000;
 }
