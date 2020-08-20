@@ -24,6 +24,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: auto;
 
 }
 
@@ -382,6 +383,7 @@ a.author:hover, a.song-track:hover {
     display: flex;
     justify-content: space-between;
     padding: 5px 20px;
+    z-index: 20;
 }
 
 .track {
